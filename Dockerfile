@@ -33,19 +33,19 @@ RUN curl -Lo v2ray-plugin.tar.gz https://github.com/shadowsocks/v2ray-plugin/rel
     && chmod +x /usr/local/bin/v2ray-plugin \
     && rm -f v2ray-plugin.tar.gz
 
-# 创建一个新的用户 10008，并设置权限
-RUN adduser -u 10008 -D shadowsocks \
-    && chown -R shadowsocks:shadowsocks /app
+# 创建用户 10014，并设置为默认运行用户
+RUN adduser -u 10014 -D ss \
+    && chown -R ss:ss /app
 
-# 切换到新用户
-USER10008
+# 切换到用户 10014
+USER 10014
 
-# 创建启动脚本并设置为可执行
+# 创建启å本并设置为可执行
 RUN echo '#!/bin/sh\n\
     exec /usr/local/bin/ssserver -s :: -p ${PORT} -k ${PASSWORD} -m ${METHOD} --plugin ${PLUGIN_PATH} --plugin-opts "server"' > /usr/local/bin/start-ss.sh \
-    && chmod +x /usr/localbin/start-ss.sh
+    && chmod +x /usr/local/bin/start-ss.sh
 
-# 暴露所需端口
+# æ²所需端口
 EXPOSE ${PORT}
 
 # 默认启动命令

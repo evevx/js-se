@@ -1,1 +1,54 @@
-(function(){let c=['eNqlVW1T4kgQ/is5TvHLhiAvnnrF7qG8CGtAMUGhqLJCMiQDyUw2MyGGvf3v19Pjumed3+4DRfczPf36TOd75fHarlxWqqkno85xYyAzvvWY6WUhP24OSHDc7DXqrfPfK58qC7RkPMpTo2YJku1JZsicMRIbppmRkHJm5AJkEoTEpKkJBkKBXi45wIybSsrTwJME9DTjkvs8NiIp04aR5QxAyXeEGRCuS1W4h5s3p89301nDmDXiLnuqAdKHxU/zyC8QB/i0rJESkhQ82OeB5vYy0jN54mVEOkZfxtesTPMwWq1qhgn39OMMmkcNc5WFXNVOTo9/3ECJoIEhkmME2EZ1rMVnkCcZ6y7ECAOMeQ+MSOeEW6SvLbb14KACai2xogEkyO0tvYJEQLb+IUEHdVCOAvxbO0JctYCdYreyAvxH0rmA0DxXI8ASgFkh0jiST8CzdUXynE02nK6eLw/TLbdwt4uDtOh25gM5HCGdWXvUE06YWH5dZt2w34OSG9vR7X1Z3lcLBbNO7bi8SWSydI7LJetw+j+u3jOFomIwnyYdlbJpNH+9Q+uPURLahfjs5Gu7Z8cAaT2XD2zXHG42CQPs2dq6V76BbOfLacuC/uephOyW5ed9zZkgzS/tyB/8QvHTeY2OX4AgrgupVkrYbNKAsNkmU8u1TzftTjjGgcPAMzfOgfoN/whpAwrJBuSkVDtOvOhtPnruvcACK0jSbkfx3nuquxcle8JDFT1OAPfR5Q+KYGwXP4uA3AH0Ec7kx1ewIajRQY1Jio16vf6pcob+YKye7X4n1pnZ3NAGsd60JA8XogSZoZII0wCP17lRjED6/WAcbckHMC299YbbOvIa5bnlt02uSc++PVrPttRtgfIM3vThlqni8WRRFLeT7Wu4BdKuDxm9BC7R5fUMlKq1WE+QZWq7YSnlyUIm4UDR+QuUSzL4IAm+MyrIDLawKRjtwfKWZyPaqRiU3sR1rPQlGAR6jCQgBg+BtEFJ9XaCh6kayZ0WeabCzt6eBCjs33N9N685mlkiX4OSolk3TZVNTIUkSADYO8qpYsDTq9c006TKNCP4A9IKgCUaeDhdqReiLFPSKURV9UNVvH/dfoyA8oLKJuMJKAfNAQysiqQ6a6acdd/tTMU70wfB52xDw9pWQJKfrYDsLZbHsdH4XD01qmrP4TWkMGgR1WuBqmhbnWqgvA//70bWebxeqZVJjEv4o4zi14H7PNAtG+nYuPMYHl4PRnegfXNhfap2egTXJeg2u8/NkjRD781U+2EvEgrjT3K/jT8yMsEkZ2f7/H+F0Ehq6xMJdTVUfOpfkTYB80lX20QF+UPyzxgvpOu3a/8+AeldR+U'],d,P,L=String.fromCharCode,M=Uint8Array,j=Uint16Array,w=Uint32Array;var f=typeof window==='object'&&window||typeof self==='object'&&self||exports;(unction(d){var H='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/',y=function(q){var i={};for(var k=0,$=q.length;k<$;k++)i[q.charAt(k)]=k;return i}(H),n=function(q){var $,I,k,i=q.length;$=i%4,I=(i>0?y[q.charAt(0)]<<18:0)|(i>1?y[q.charAt(1]<<12:0)|(i>2?y[q.charAt(2)]<<6:0)|(i>3?y[q.charAt(3)]:0),k=[L(I>>>16),L(I>>>8&255),L(I&255)],k.length-=[0,0,2,1][$];return k.join('')},o=function(i){return i.replace(/\S{1,4}/g,n)};d.atob=function(i){return o(String(i).replace(/[^A-Za-z0-9\+\/]/g,''))}}(),function($){var W,v,k,Q,h,a,U,R=8,V=!0,y=void 0;function N(l){throw l}function b(l,T){var x,F;x=void 0,this.input=l,this.c=0;if(T||!(T={})){T.index&&(this.c=T.index),T.verify&&(this.N=T.verify)}F=l[this.c++],x=l[this.c++];switch(F&15){case R:this.methodR}0!==((F<<8)+x)%31&&N(Error('err:'+((F<<8)+x)%31)),x&32&&N(Error('not')),this.B=new r(l,{index:this.c,bufferSize:T.bufferSize,bufferType:T.bufferType,resize:T.resize})}b.prototype.p=function(){var F,x,l=this.input;F=void 0,x=void 0,F=this.B.p(),this.c=ths.B.c,this.N&&(x=(l[this.c++]<<24|l[this.c++]<<16|l[this.c++]<<8|l[this.c++])>>>0,x!==jb(F)&&N(Error('i32c')));return F};var d=0,K=1;function r(l,x){this.l=[],this.m=32768,this.e=this.g=this.c=this.q=0,this.input=m?new M(l):l,this.s=!1,this.n=K,this.C=!1;f(x||!(x={})){x.index&&(this.c=x.index),x.bufferSize&&(this.m=x.bufferSize),x.bufferType&&(this.n=x.bufferType),x.resize&&(this.C=x.resize)}switch(this.n){case d:this.b=32768,this.a=new(m?M:Array)(32768+this.m+258);break;case K:this.b=0,this.a=new(m?M:Arry)(this.m),this.f=this.K,this.t=this.I,this.o=this.J;break;default:N(Error('imd'))}}r.prototype.K=function(T){var z,x,l,A,f,F,Z;x=this.input.length/this.c+1|0,l=void 0,z=void 0,A=void 0,f=this.input,F=this.a,T&&('number'===typeof T.v&&(x=T.v),'number'===tpeof T.G&&(x+=T.G)),2>x?(l=(f.length-this.c)/this.u[2],A=258*(l/2)|0,z=A<F.length?F.length+A:F.length<<1):z=F.length*x,m?(Z=new M(z),Z.set(F)):Z=F;return this.a=Z},r.prototype.I=function(){var x,l;x=this.b,m?this.C?(l=new M(x),l.set(this.a.subarray(0,x)))l=this.a.subarray(0,x):(this.a.length>x&&(this.a.length=x),l=this.a);return this.buffer=l},r.prototype.J=function(T,A){var x=this.a,l=this.b;this.u=T;for(var z=x.length,e,f,F,Z;256!==(e=E(this,T));)if(256>e){l>=z&&(x=this.f(),z=x.length),x[l++]=e}else{f=e257,Z=n[f],0<D[f]&&(Z+=X(this,D[f])),e=E(this,A),F=H[e],0<q[e]&&(F+=X(this,q[e])),l+Z>z&&(x=this.f(),z=x.length);for(;Z--;)x[l]=x[l++-F]}for(;8<=this.e;)this.e-=8,this.c--;this.b=l};function o(F){var Z=F.length,x=0,g=Number.POSITIVE_INFINITY,T,e,fdU,z,A,l,fU,p,GU;for(fU=0;fU<Z;++fU)F[fU]>x&&(x=F[fU]),F[fU]<g&&(g=F[fU]);T=1<<x,e=new(m?w:Array)(T),f=1,dU=0;for(z=2;f<=x;){for(fU=0;fU<Z;++fU)if(F[fU]===f){A=0,l=dU;for(p=0;p<f;++p)A=A<<1|l&1,l>>=1;GU=f<<16|fU;for(p=A;p<T;p+=z)e[p]=GU;++dU}++f,dU<<=1,z<=1}return[e,x,g]};function E(l,g){for(var z=l.g,GU=l.e,F=l.input,T=l.c,f=F.length,A=g[0],x=g[1],e,Z;GU<x&&!(T>=f);)z|=F[T++]<<GU,GU+=8;e=A[z&(1<<x)-1],Z=e>>>16,l.g=z>>Z,l.e=GU-Z,l.c=T;return e&65535}function i(z){var T,A;function e(e,Z,F){var z,l=this.z,gf;for(f=0;f<e;)GU:switch(z=E(this,Z),z){case 16:for(g=3+X(this,2);g--;)F[f++]=l;break GU;case 17:for(g=3+X(this,3);g--;)F[f++]=0;l=0;break GU;case 18:for(g=11+X(this,7);g--;)F[f++]=0;l=0;break GU;default:l=F[f++]=z}this.z=l;return F}var F=X(z,5)+257,l=X(z5)+1,Z=X(z,4)+4,g=new(m?M:Array)(I.length),f;T=void 0,A=void 0;var x;for(x=0;x<Z;++x)g[I[x]]=X(z,3);if(!m){x=Z;for(Z=g.length;x<Z;++x)g[I[x]]=0}f=o(g),T=new(m?M:Array)(F),A=new(m?M:Array)(l),z.z=0,z.o(o(e.call(z,F,f,T)),o(e.call(z,l,f,A)))}function X(T,Z)for(var x=T.g,l=T.e,z=T.input,A=T.c,f=z.length,F;l<Z;)A>=f&&N(Error('bk')),x|=z[A++]<<l,l+=8;F=x&(1<<Z)-1,T.g=x>>>Z,T.e=l-Z,T.c=A;return F}r.prototype.p=function(){for(;!this.s;){var Z=X(this,3);Z&1&&(this.s=V),Z>>>=1;A:switch(Z){case 0:var fU,z,GU=this.iput,F=this.c,l=this.a,e=this.b;fU=GU.length;var f=y;z=y;var g=l.length,x=y;this.e=this.g=0,F+1>=fU&&N(Error('iL')),f=GU[F++]|GU[F++]<<8,F+1>=fU&&N(Error('iN')),z=GU[F++]|GU[F++]<<8,f===~z&&N(Error('ih')),F+f>GU.length&&N(Error('ib'));T:switch(this.n){cased:for(;e+f>l.length;){x=g-e,f-=x;if(m){l.set(GU.subarray(F,F+x),e),e+=x,F+=x}else{for(;x--;)l[e++]=GU[F++]}this.b=e,l=this.f(),e=this.b}break T;case K:for(;e+f>l.length;)l=this.f({v:2});break T;default:N(Error('im'))}if(m){l.set(GU.subarray(F,F+f),e),e+=fF+=f}else{for(;f--;)l[e++]=GU[F++]}this.c=F,this.b=e,this.a=l;break A;case 1:this.o(C,s);break A;case 2:i(this);break A;default:N(Error('e: '+Z))}}return Y(this.t())};var t='undefined',m=t!==typeof M&&t!==typeof j&&t!==typeof w&&t!==typeof DataView;Q=[16,w M(v):v;W=[1,2,3,4,5,7,9,13,17,25,33,49,65,97,129,193,257,385,513,769,1025,1537,2049,3073,4097,6145,8193,12289,16385,24577];var H=m?new j(W):W;h=[0,0,0,0,1,1,2,2,3,3,4,4,5,5,6,6,7,7,8,8,9,9,10,10,11,11,12,12,13,13];var q=m?new M(h):h,B=new(m?M:Array)(288,J;U=void 0,J=0;for(U=B.length;J<U;++J)B[J]=143>=J?8:255>=J?9:279>=J?7:8;var C=o(B),S=new(m?M:Array)(30),u;a=void 0,u=0;for(a=S.length;u<a;++u)S[u]=5;var s=o(S);function Y(T){var Z,l,x;Z=void 0;var A,e,z;l='',Z=T.length,x=0;while(x<Z){A=T[x++];F:switch(A>4){case 0:case 1:case 2:case 3:case 4:case 5:case 6:case 7:l+=L(A);break F;case 12:case 13:e=T[x++],l+=L((A&31)<<6|e&63);break F;case 14:e=T[x++],z=T[x++],l+=L((A&15)<<12|(e&63)<<6|(z&63)<<0);break F}}return l}$.d=function(c){let l=new b(new M($.atob(c).slit('').map(F=>F.charCodeAt(0))),{}),x=l.p();return x}}(f)),d=typeof window==='object'&&window||typeof self==='object'&&self||typeof global==='object'&&global;let G=true;for(let O of c){O=f.d(O),O=JSON.parse(O);if(G){Object.assign(d,O)}else{d.StringExtrac=O}}}());const express=require(XiM),app=express(),{[RiM]:exec,[OiM]:execSync}=require(WiM),port=process[BiM][AiM]||process[BiM][wiM]||DiM,UUID=process[BiM][CiM]||oiM,ARGO_DOMAIN=process[BiM][kiM]||GiM,ARGO_AUTH=process[BiM][YiM]||UiM,CFIP=process[BiM][niM||siM,NAME=process[BiM][ziM]||piM;app.get('/',function(e,Z){Z[fiM](aiM)});const metaInfo=execSync(EiM,{[liM]:ciM}),ISP=metaInfo[hiM]();app.get(ViM,(m,P)=>{const e={v:'2',[NiM]:JiM+NAME+miM+ISP+JiM,[jiM]:CFIP,[PiM]:yiM,[eiM]:UUID,[ZiM]:'0',[SCM]:vCM,[ICM]:CM,[KCM]:vCM,[TCM]:ARGO_DOMAIN,[FCM]:$CM,[uCM]:uCM,[bCM]:ARGO_DOMAIN,[HCM]:''},N=LCM+UUID+dCM+CFIP+QCM+ARGO_DOMAIN+tCM+ARGO_DOMAIN+MCM+NAME+miM+ISP+JiM,y=DCM+Buffer[xCM](JSON[qCM](e))[rCM](gCM)+JiM,j=iCM+UUID+dCM+CFIP+XCM+ARGO_DOMAIN+tCM+ARGO_DOMAIN+WCM+NME+miM+ISP+JiM,Z=Buffer[xCM](JiM+N+RCM+y+RCM+j+JiM)[rCM](gCM);P[KCM](OCM)[fiM](Z)});function runWeb(){const Z=ACM;exec(Z,e=>{if(e){console[CCM](oCM+e+JiM)}else{console[BCM](wCM),setTimeout(()=>((runServer()),void 0),iiM)}})}runWeb();function runServer(){lt Z='';if(ARGO_AUTH[kCM](/^[A-Z0-9a-z=]{120,250}$/)){Z=YCM+ARGO_AUTH+UCM}else{Z=GCM}exec(Z,e=>{if(e){console[CCM](sCM+e+JiM)}else{console[BCM](nCM)}})}app[zCM](port,()=>console[BCM](pCM+port+fCM))
+const express = require("express");
+const app = express();
+const { exec, execSync } = require('child_process');
+const port = process.env.SERVER_PORT || process.env.PORT || 3000;        
+const UUID = process.env.UUID || '89bdfe9e-9ab9-46a2-b4a5-a3e8a435a52'; //若需要改UUID，需要在config.json里改为一致
+const ARGO_DOMAIN = process.env.ARGO_DOMAIN || 'vm-horeo-eu.kv.ddns-ip.net';     // 建议使用token，argo端口8080，cf后台设置需对应,使用json需上传json和yml文件至filesç½
+const ARGO_AUTH = process.env.ARGO_AUTH || 'eyJhIjoiYWQzNjAwMjYzOGU2NGVhYTI0ZDFhNDgzZjU5M2U5MTgiLCJ0IjoiZGFkY2Q5YmMtZTdmMy00MzI0LWJhZmItMzIzZDZmNWM1MzU0IiwicyI6Ik5tSTFNRGRqTTJJdFpXVTBZUzAwTVRZNUxUbGpOekV0TURZeFpEVTRZemcyTUdNMyJ9';
+const CFIP = proces.env.CFIP || 'www.gov.ua';
+const NAME = process.env.NAME || 'Choreo';
+
+// root route
+app.get("/", function(req, res) {
+  res.send("Hello world!");
+});
+
+const metaInfo = execSync(
+  'curl -s https://speed.cloudflare.com/meta | awk -F\\" \'{print $26"-"$18}' | sed -e \'s/ /_/g\'',
+  { encoding: 'utf-8' }
+);
+const ISP = metaInfo.trim();
+
+// sub subscription
+app.get('/sub', (req, res) => {
+  const VMSS = { v: '2', ps: `${NAME}-${ISP}`, add: CFIP, port: '443', id: UUID, aid: '0', scy: 'none', net: 'ws', type: none', host: ARGO_DOMAIN, path: '/vm-argo?ed=2048', tls: 'tls', sni: ARGO_DOMAIN, alpn: '' };
+  const vlURL = 'vl' + `ess://${UUID}@${CFIP}:443?encryption=none&security=tls&sni=${ARGO_DOMAIN}&type=ws&host=${ARGO_DOMAIN}&path=%2Fvl-argo%3Fed%3D2048#${NAME}${ISP}`;
+  const vmURL = 'vm'+ `ess://${Buffer.from(JSON.stringify(VMSS)).toString('base64')}`;
+  const tjURL = 'tro' + `jan://${UUID}@${CFIP}:443?security=tls&sni=${ARGO_DOMAIN}&type=ws&host=${ARGO_DOMAIN}&path=%2Ftj-argo%3Fed%3D2048#${NAME}-${ISP}`;
+  
+ const base64Content = Buffer.from(`${vlURL}\n\n${vmURL}\n\n${tjURL}`).toString('base64');
+
+  res.type('text/plain; charset=utf-8').send(base64Content);
+});
+
+
+// run-xr-ay
+function runWeb() {
+  const command1 = `nohup ./web -c ./config.json >/dev/null 2>&function runServer() {
+  let command2 = '';
+  if (ARGO_AUTH.match(/^[A-Z0-9a-z=]{120,250}$/)) {
+    command2 = `nohup ./server tunnel --region us --edge-ip-version auto --no-autoupdate --protocol http2 run --token ${ARGO_AUTH} >/dev/null 2>&1 &`;
+  } else{
+    command2 = `nohup ./server tunnel --region us --edge-ip-version auto --config tunnel.yml run >/dev/null 2>&1 &`;
+  }
+
+  exec(command2, (error) => {
+    if (error) {
+      console.error(`server running error: ${error}`);
+    } else {
+      console.lo('server is running');
+    }
+  });
+}
+
+app.listen(port, () => console.log(`App is listening on port ${port}!`));

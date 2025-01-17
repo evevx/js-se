@@ -21,15 +21,15 @@
                         "dest":3001
                     },
                     {
-                        "path":"/vless-argo",
+                        "path":"/vl-argo",
                         "dest":3002
                     },
                     {
-                        "path":"/vmess-argo",
+                        "path":"/vm-argo",
                         "dest":3003
                     },
                     {
-                        "path":"/trojan-argo",
+                        "path":"/tj-argo",
                         "dest":3004
                     }
                 ]
@@ -72,7 +72,7 @@
                 "network":"ws",
                 "security":"none",
                 "wsSettings":{
-                    "path":"/vless-argo"
+                    "path":"/vl-argo"
                 }
             },
             "sniffing":{
@@ -100,7 +100,7 @@
             "streamSettings":{
                 "network":"ws",
                 "wsSettings":{
-                    "path":"/vmess-argo"
+                    "path":"/vm-argo"
                 }
             },
             "sniffing":{
@@ -128,7 +128,7 @@
                 "network":"ws",
                 "security":"none",
                 "wsSettings":{
-                    "path":"/trojan-argo"
+                    "path":"/tj-argo"
                 }
             },
             "sniffing":{

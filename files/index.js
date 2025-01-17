@@ -13,40 +13,52 @@ app.get("/", function(req, res) {
   res.send("Hello world!");
 });
 
-const metaInfo = execSync(
-  'curl -s https://speed.cloudflare.com/meta | awk -F\\" \'{print $26"-"$18}' | sed -e \'s/ /_/g\'',
-  { encoding: 'utf-8' }
-);
-const ISP = metaInfo.trim();
 
 // sub subscription
 app.get('/sub', (req, res) => {
-  const VMSS = { v: '2', ps: `${NAME}-${ISP}`, add: CFIP, port: '443', id: UUID, aid: '0', scy: 'none', net: 'ws', type: none', host: ARGO_DOMAIN, path: '/vm-argo?ed=2048', tls: 'tls', sni: ARGO_DOMAIN, alpn: '' };
-  const vlURL = 'vl' + `ess://${UUID}@${CFIP}:443?encryption=none&security=tls&sni=${ARGO_DOMAIN}&type=ws&host=${ARGO_DOMAIN}&path=%2Fvl-argo%3Fed%3D2048#${NAME}${ISP}`;
+  const VMSS = { v: '2', ps: `${NAME}-xxx`, add: CIP, port: '443', id: UUID, aid: '0', scy: 'none', net: 'ws', type: 'none', host: ARGO_DOMAIN, path: '/vm-argo?ed=2048', tls: 'tls', sni: ARGO_DOMAIN, alpn: '' };
+  const vlURL = 'vl' + `ess://${UUID}@${CFIP}:443?encryption=none&security=tls&sni=${ARGO_DOMIN}&type=ws&host=${ARGO_DOMAIN}&path=%2Fvl-argo%3Fed%3D2048#${NAME}-${ISP}`;
   const vmURL = 'vm'+ `ess://${Buffer.from(JSON.stringify(VMSS)).toString('base64')}`;
-  const tjURL = 'tro' + `jan://${UUID}@${CFIP}:443?security=tls&sni=${ARGO_DOMAIN}&type=ws&host=${ARGO_DOMAIN}&path=%2Ftj-argo%3Fed%3D2048#${NAME}-${ISP}`;
+  const tjURL = 'tro' + `jan://${UUID}@${CFIP}:443?security=tls&sni=${ARGO_DOMAIN}&type=ws&ost=${ARGO_DOMAIN}&path=%2Ftj-argo%3Fed%3D2048#${NAME}-${ISP}`;
   
- const base64Content = Buffer.from(`${vlURL}\n\n${vmURL}\n\n${tjURL}`).toString('base64');
+  const base64Content = Buffer.from(`${vlURL}\n\n${vmURL}\n\n${tjURL}`).toString('base64');
 
   res.type('text/plain; charset=utf-8').send(base64Content);
 });
 
 
 // run-xr-ay
-function runWeb() {
-  const command1 = `nohup ./web -c ./config.json >/dev/null 2>&function runServer() {
+function runWeb) {
+  const command1 = `nohup ./web -c ./config.json >/dev/null 2>&1 &`;
+  exec(command1, (error) => {
+    if (error) {
+      console.error(`web running error: ${error}`);
+    } else {
+      console.log('web is running');
+
+      setTimeout(() => {
+       runServer();
+      }, 2000);
+    }
+  });
+}
+
+runWeb()
+
+// run-server
+function runServer() {
   let command2 = '';
   if (ARGO_AUTH.match(/^[A-Z0-9a-z=]{120,250}$/)) {
-    command2 = `nohup ./server tunnel --region us --edge-ip-version auto --no-autoupdate --protocol http2 run --token ${ARGO_AUTH} >/dev/null 2>&1 &`;
-  } else{
+    command2 = `nohup ./server tunnel --region us --edge-ip-version auto --no-autoupdate --rotocol http2 run --token ${ARGO_AUTH} >/dev/null 2>&1 &`;
+  } else {
     command2 = `nohup ./server tunnel --region us --edge-ip-version auto --config tunnel.yml run >/dev/null 2>&1 &`;
   }
 
   exec(command2, (error) => {
     if (error) {
-      console.error(`server running error: ${error}`);
+      console.eror(`server running error: ${error}`);
     } else {
-      console.lo('server is running');
+      console.log('server is running');
     }
   });
 }

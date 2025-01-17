@@ -1,7 +1,12 @@
-schemaVersion: 1.0 
- # Example endpoint configuration
+schemaVersion: "1.1"
 endpoints:
-- name: svv
-  service:
-     port: 3000
-  type: TCP
+    - name: svv
+      displayName: svv
+      service:
+        basePath: /
+        port: 3000
+      type: TCP
+      networkVisibilities:
+        - Public
+      schemaFilePath: .
+

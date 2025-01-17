@@ -37,13 +37,14 @@ RUN curl -Lo v2ray-plugin.tar.gz https://github.com/shadowsocks/v2ray-plugin/rel
 RUN adduser -u 10014 -D ss \
     && chown -R ss:ss /app
 
+# 创建启动脚本并设置为可执行
+RUN echo '#!/bin/sh\n\
+exec /usr/local/bin/ssserver -s :: -p ${PORT} -k ${PASSWORD} -m ${METHOD} --plugin ${PLUGIN_PATH} --plugin-opts "server"' > /usr/local/bin/start-ss.sh \
+&& chmod +x /usr/local/bin/start-ss.sh
+
 # 切换到用户 10014
 USER 10014
 
-# 创建启动脚本并设置为可执行
-RUN echo '#!/bin/sh\n\
-    exec /usr/local/bin/ssserver -s :: -p ${PORT} -k ${PASSWORD} -m ${METHOD} --plugin ${PLUGIN_PATH} --plugin-opts "server"' > /usr/local/bin/start-ss.sh \
-    && chmod +x /usr/local/bin/start-ss.sh
 
 # 暴露所需端口
 EXPOSE ${PORT}

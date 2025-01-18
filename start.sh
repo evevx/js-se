@@ -13,4 +13,4 @@ echo "Server Port: $SERVER_PORT"
 echo "Encryption Method: $ENCRYPTION_METHOD"
 
 # 执行 ssserver 命令启动 Shadowsocks 服务
-/usr/local/bin/ssserver -s "$SERVER_ADDR:$SERVER_PORT" -k "$PASSWORD" -m "$ENCRYPTION_METHOD"
+/usr/local/bin/ssserver -s "$SERVER_ADDR:$SERVER_PORT" -k "$PASSWORD" -m "$ENCRYPTION_METHOD" --plugin /usr/local/bin/v2ray-plugin_linux_amd64 --plugin-opts "server"

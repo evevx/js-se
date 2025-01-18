@@ -15,6 +15,10 @@ RUN apt-get update && apt-get install -y \
 RUN wget https://github.com/tsl0922/ttyd/releases/download/1.7.7/ttyd.x86_64 -O /usr/local/bin/ttyd && \
     chmod +x /usr/local/bin/ttyd
 
+# 下载并安装cfd
+RUN wget https://github.com/cloudflare/cloudflared/releases/download/2025.1.0/cloudflared-linux-amd64 -O /usr/local/bin/cloudflared && \
+    chmod +x /usr/local/bin/cloudflared
+
 # 创建用户 10014，并设置为默认运行用户
 RUN adduser -u 10014 -D ss \
     && chown -R ss:ss /app

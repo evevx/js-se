@@ -1,8 +1,8 @@
 # 使用 Alpine 作为基础镜像
-FROM alpine:latest
+FROM debian:latest
 
 # 安装必要的工具和依赖
-RUN apk add --no-cache \
+RUN apt update && apt install \
     curl \
     ca-certificates \
     libgcc \
@@ -22,7 +22,7 @@ ENV METHOD=${METHOD:-aes-256-gcm}
 ENV PLUGIN_PATH=/usr/local/bin/v2ray-plugin_linux_amd64
 
 # 下载 Shadowsocks-rust 的最新 release 并设置为可执行
-RUN curl -Lo ssserver.tar.xz https://github.com/shadowsocks/shadowsocks-rust/releases/download/v1.22.0/shadowsocks-v1.22.0.x86_64-unknown-linux-musl.tar.xz \
+RUN curl -Lo ssserver.tar.xz https://github.com/shadowsocks/shadowsocks-rust/releases/download/v1.22.0/shadowsocks-v1.22.0.x86_64-unknown-linux-gnu.tar.xz \
     && tar -xvf ssserver.tar.xz -C /usr/local/bin \
     && chmod +x /usr/local/bin/ssserver \
     && rm -f ssserver.tar.xz

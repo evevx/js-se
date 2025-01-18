@@ -3,6 +3,7 @@ FROM debian:latest
 
 # 设置环境变量
 ENV PASSWORD=""
+ENV PORT=3000
 
 # 更新包管理器并安装必要的软件
 RUN apt-get update && apt-get install -y \

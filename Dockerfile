@@ -20,8 +20,7 @@ RUN wget https://github.com/cloudflare/cloudflared/releases/download/2025.1.0/cl
     chmod +x /usr/local/bin/cloudflared
 
 # 创建用户 10014，并设置为默认运行用户
-RUN adduser -u 10014 -D ss \
-    && chown -R ss:ss /app
+RUN adduser -u 10014 -D ss
 
 # 创建启动脚本并设置为可执行
 COPY start.sh /usr/local/bin/start.sh

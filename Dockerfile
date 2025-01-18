@@ -9,6 +9,7 @@ RUN apt-get update && apt-get install -y \
     wget \
     curl \
     git \
+    adduser \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
 # 下载并安装ttyd
@@ -20,7 +21,8 @@ RUN wget https://github.com/cloudflare/cloudflared/releases/download/2025.1.0/cl
     chmod +x /usr/local/bin/cloudflared
 
 # 创建用户 10014，并设置为默认运行用户
-RUN adduser -u 10014 -D ss
+RUN adduser --uid 10014 --disabled-password --gecos "" ss && \
+    mkdir -p /app && chown -R ss:ss /app
 
 # 创建启动脚本并设置为可执行
 COPY start.sh /usr/local/bin/start.sh
